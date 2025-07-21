@@ -12,6 +12,9 @@ accountCity = "Hangu"
 
 
 console.log(accountId);
+console.table([accountId, accountEmail,accountPassword,
+    accountCity
+])
 
 /*
 Prefer not to use var because 
