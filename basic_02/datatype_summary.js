@@ -40,4 +40,29 @@ const myFunction = function(){
     console.log("Hello World")
 }
  
-console.log(typeof myFunction)
+// console.log(typeof myFunction)
+
+//##################################################
+
+// Stack (Premitive): value copy , Heap (Non-Primitive): reference
+
+let myGitHubName = "muhammadhila494"
+
+let anotherName = myGitHubName
+anotherName = "chaiaurJS"
+
+// console.log(anotherName);
+// console.log(myGitHubName);
+
+let user = {
+    email: "hilalahmad494520@gmail.com",
+    age: 22
+}
+
+let userTwo = user
+userTwo.email = "muhammadhilal494513@gmail.com"
+
+console.log(userTwo.email);
+console.log(user.email);
+
+
