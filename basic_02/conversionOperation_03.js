@@ -9,9 +9,9 @@ let score = "Hilal"
 // console.log(typeof score);
 // console.log(typeof(score));
 
-let valueNumber = Number(score)
-// console.log(typeof valueNumber);
-// console.log(valueNumber);
+let valueInNumber = Number(score)
+// console.log(typeof valueInNumber);
+// console.log(valueInNumber);
 
 // "22" => 22
 // "22abc" => Nan
