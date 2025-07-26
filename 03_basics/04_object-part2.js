@@ -58,5 +58,43 @@ users[0].email
 // console.log(tinderUser.hasOwnProperty('name'));
 // console.log(tinderUser.hasOwnProperty('nameeee'));
 
+const course = {
+    coursename: "Js",
+    price: "999",
+    courseInstructor: "Hilal"
+}
 
+// course.courseInstructor //
+
+const {courseInstructor} = course
+// console.log(courseInstructor);
+
+const {courseInstructor: instructor} = course
+// console.log(instructor);
+
+// React Concept
+// const navbar = (props.company) => {
+
+// }
+// const navbar = ({company}) => {
+
+// }
+// navbar(company = "AMFAH")
+
+// Api concept
+//JSON(JavaScript Object Notation) : object without name
+
+//API in json format
+// {
+//     name: "hilal",
+//     coursename: "JS",
+//     price: "free"
+// }
+
+// APi in array format
+// [
+//     {},
+//     {},
+//     {},
+// ]
 
