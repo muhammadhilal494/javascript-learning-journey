@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+
+<body>
+    <ul id="images">
+        <li>
+            <img width="200px" id="img1" src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg"
+                alt="Mountain under clouds">
+        </li>
+        <li>
+            <img width="200px" id="img2" src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg"
+                alt="Foggy forest road">
+        </li>
+        <li>
+            <img width="200px" id="img3" src="https://images.pexels.com/photos/34950/pexels-photo.jpg"
+                alt="Tropical beach with palm trees"
+                onclick="alert('owl')"
+            >
+            <!-- onclick on direct button in not best approach -->
+        </li>
+        <li>
+            <img width="200px" id="img4" src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg"
+                alt="Desert landscape">
+        </li>
+        <li>
+            <img width="200px" id="img5" src="https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg"
+                alt="Snowy mountain peaks">
+        </li>
+       <li><a id="google" href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a></li>
+
+    </ul>
+
+</body>
+<script>
+    // document.getElementById('img2').onclick = function(){
+    //     alert("Image second clicked")
+    // }   // This is also not best approach
+
+
+    // attachEvent()
+    // jQuery - on
+
+
+    // document.getElementById('img1').addEventListener('click', function(){
+    //     alert("First image click")
+    // }, false)   // This is best approach
+
+   
+
+    //type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+     document.getElementById('img4').addEventListener('click', function(e){
+        console.log(e);
+        
+    }, false)
+
+    // Event captured: true: event propagation
+    // Event public: false
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul for false");
+        
+    // }, false)
+
+    // document.getElementById('img1').addEventListener('click', function(e){
+    //     console.log("first image clicked");
+        
+    // }, false)
+
+    // captured event propagation
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul for true");
+        
+    // }, true)
+
+    // document.getElementById('img2').addEventListener('click', function(e){
+    //     console.log("Second image clicked");
+        
+    // }, true)
+
+    // stopPropagation
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul for false");
+        
+    // }, false)
+
+    // document.getElementById('img1').addEventListener('click', function(e){
+    //     console.log("first image clicked");
+    //     e.stopPropagation()
+        
+    // }, false)
+
+
+    // document.getElementById('google').addEventListener
+    // ('click', function(e){
+    //     e.preventDefault()
+    //     console.log("Google clicked");
+    // })
+
+    document.querySelector('#images').addEventListener
+    ('click', function(e){
+        console.log(e.target.parentNode);
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removIt = e.target.parentNode
+            removIt.remove();
+        }
+        
+        // removIt.remove()
+        // removeIt.parentNode.removeChild(removeIt)
+
+        
+    }, false)
+</script>
+
+</html>
